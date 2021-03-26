@@ -60,7 +60,7 @@ text-decoration: none;
   background-color: transparent;
   border: #EE9A4D solid 2px
 }
-.button.email.hover{
+.button.email:hover{
   background-color: #EE9A4D;
-  color: #D1D0CE
+  color: white;
 }
