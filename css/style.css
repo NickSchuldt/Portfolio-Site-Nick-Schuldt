@@ -53,7 +53,8 @@ a:active{
   transition: opacity 0.2s;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  transition-duration: 0.4;
+  transition-property: opacity;
 }
 .button:hover {
 opacity: 0.8;
@@ -107,12 +108,17 @@ nav > ul > li > a {
 .row{
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
+.row::after{
+  content:"";
+  clear: both;
+  display: table;
+}
 #work{
   padding-bottom: 25px;
   border-bottom: 1px solid #4a4a4a;
 }
 #hero h1{
-  padding-top: 155px;
+  padding-top: 10px;
   text-align: center;
 }
 .logo{
@@ -131,6 +137,10 @@ nav > ul > li > a {
   background-color: #EE9A4D;
   border-bottom: 1px solid #4a4a4a;
 }
+#hero span{
+  display: block;
+}
+
 main{
   padding-top: 133px;
   text-align: center;
@@ -141,7 +151,7 @@ main{
   width: 100%;
 }
 footer{
-  padding-top: 10px
+  padding-top: 10px;
   padding-right: 5px;
   padding-bottom: 15px;
   padding-left: 5px;
@@ -192,27 +202,96 @@ footer{
 #UI{
   margin: 100px 0;
 }
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
 
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
-}
+  header{
+  text-align: unset;
+  padding:20px 0 13px
+    }
+    nav{
+      width: auto;
+      float: right;
+      margin-top: 4px;
+    }
+    .col-md-6 {
+      width: 50%;
+    }
+  }
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+  }
+  .container{
+    max-width: 1200px;
+    margin-left: auto;
+    Margin-right: auto;
+  }
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
+  .col-xlg-8{
+    width: 66.66%
+  }
+  .col-xlg-9{
+    width: 75%
+  }
+  }
 }
 
 /* ==============================
 Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px) {
+  .col-exlg-10{
+    width: 83.33%
+  }
+  .col-exlg-11{
+    width: 91.66%
+  }
+}
+@keyframes color-change{
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternat;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
