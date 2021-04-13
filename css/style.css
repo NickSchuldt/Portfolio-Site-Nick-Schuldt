@@ -37,13 +37,13 @@ h4{
   margin-right: 50px;
 }
 a:hover{
-  color: #EE9A4D
+  color: #D1D0CE
 }
 a:focus{
   color: #EE9A4D
 }
 a:visited {
-  color:#D1D0CE
+  color: purple
 }
 a:active{
   color:#0000EE
@@ -121,22 +121,28 @@ nav > ul > li > a {
   top: 2px;
   font-size: 20px;
 }
+.navtoggle li .icon:focus {
+  color: #4a4a4a;
+}
 .navtoggle.responsive nav {
   padding: 24px 0 0;
 }
 .navtoggle.responsive li  {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid rgba(255,127,80,0.5);
+  border-top: 1px solid rgba(255,127,80,.75);
+}
+.navtoggle.responsive li:hover  {
+  color: #4a4a4a;
 }
 .navtoggle.responsive li:last-child  {
   padding: 0 0 10px;
 }
-nav > ul > li >: hover {
+nav > ul > li:hover {
   color: #D1D0CE;
 }
-nav > ul > li >: active {
-  color: #D1D0CE;
+nav > ul > li:active {
+  color: #4a4a4a;
 }
 .container{
   padding: 0 15px;
@@ -218,25 +224,25 @@ footer{
 
 /* Experts */
 #Overview{
-  margin: 100px 0;
+  margin: 25px 0;
 }
 #Surveys{
-  margin: 100px 0;
+  margin: 25px 0;
 }
 #Interviews{
-  margin: 100px 0;
+  margin: 25px 0;
 }
 #Personas{
-  margin: 100px 0;
+  margin: 25px 0;
 }
 #CardSorting{
-  margin: 100px 0;
+  margin: 25px 0;
 }
 #UsabilityTesting{
-  margin: 100px 0;
+  margin: 25px 0;
 }
 #UI{
-  margin: 100px 0;
+  margin: 25px 0;
 }
 [class*="col-"] {
   float: left;
@@ -262,8 +268,13 @@ Medium devices (640px and larger)
     }
     nav > ul > li {
       display: inline-block;
-      min-width: 640px;
       text-align: center;
+    }
+    .navtoggle.responsive nav {
+      padding-top: 0;
+    }
+    .navtoggle.responsive li {
+      padding: 0;
     }
     .navtoggle li:not(:last-child) {
       display: inline-block;
