@@ -266,6 +266,9 @@ Medium devices (640px and larger)
     padding-bottom: 13px;
     width: 100%;
       }
+      #myNavtoggle{
+        text-align: left;
+      }
     nav{
       width: auto;
       float: right;
